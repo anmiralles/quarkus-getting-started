@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: quarkus-getting-started
+  name: quarkus-getting-started
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: quarkus-getting-started
+  template:
+    metadata:
+      labels:
+        app: quarkus-getting-started
+    spec:
+      containers:
+        - image: quay.io/quarkus-getting-started:latest
+          imagePullPolicy: Always
+          name: quarkus-getting-started
+          ports:
+            - containerPort: 9000
+              protocol: TCP
