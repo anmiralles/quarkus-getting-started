@@ -19,5 +19,5 @@ spec:
           imagePullPolicy: Always
           name: quarkus-getting-started
           ports:
-            - containerPort: 8081
+            - containerPort: 8082
               protocol: TCP
