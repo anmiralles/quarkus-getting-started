@@ -1,4 +1,4 @@
-{{- if .Values.namespace.creation -}}
+{{- if eq (default "false" .Values.namespace.creation) "true" -}}
 apiVersion: v1
 kind: Namespace
 metadata:
